@@ -10,13 +10,13 @@ from geopy.distance import geodesic
 geolocator = Nominatim()
 
 # A query address
-#query = '1314 chavez st, las vegas, nm'
 query = input("Enter First location, I guess? ")
 query2 = input("Enter Second locatioin, bruh? ")
 
 # Build/retrieve a geopy Location object with a query address
-location = geolocator.geocode(query)
-location2 = geolocator.geocode(query2)
+#could set timeout to None
+location = geolocator.geocode(query, timeout=10)
+location2 = geolocator.geocode(query2, timeout=10)
 
 # Access the latitude and longitude from location object
 first =(location.latitude, location.longitude)
