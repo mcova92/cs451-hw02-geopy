@@ -6,6 +6,8 @@
 from geopy.geocoders import Nominatim
 from geopy.distance import geodesic
 
+
+#in geopy/geocoders/osm.py set user_agent to my_application to get rid of error
 # Create a geolocator object to access geo data using Nominatum
 geolocator = Nominatim()
 
